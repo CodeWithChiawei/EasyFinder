@@ -18,13 +18,22 @@ class UserPanelViewModel {
             "Last Name": lastName,
             "Hobby": hobby
         ]
-        dataBase.child("\(firstName) \(lastName)").setValue(object)
+        if !firstName.isEmpty, !lastName.isEmpty, !hobby.isEmpty {
+            dataBase.child("\(firstName) \(lastName)").setValue(object)
+            print("\(firstName) \(lastName) created.")
+        } else {
+            print("Missing info for the User")
+        }
     }
     
     func searchUser(with fullName: String) {
         dataBase.child(fullName).observeSingleEvent(of: .value) { dataSnapshot in
             guard let value = dataSnapshot.value else { return }
-            print(value)
+            if dataSnapshot.exists() {
+                print(value)
+            } else {
+                print("Not Exist")
+            }
         }
     }
 }
