@@ -5,7 +5,6 @@
 //
 
 import UIKit
-import FirebaseDatabase
 
 class UserPanelViewController: UIViewController {
     
