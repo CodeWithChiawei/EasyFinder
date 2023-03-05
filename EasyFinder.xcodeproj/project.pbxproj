@@ -10,9 +10,9 @@
 		886E7BB6435A2CD98CD9A63C /* Pods_EasyFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B4EF48086ACEDFB2D861B7 /* Pods_EasyFinder.framework */; };
 		BCCC7C1229B3EB3A00FE8769 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCC7C1129B3EB3A00FE8769 /* AppDelegate.swift */; };
 		BCCC7C1429B3EB3A00FE8769 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCC7C1329B3EB3A00FE8769 /* SceneDelegate.swift */; };
-		BCCC7C1629B3EB3A00FE8769 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCC7C1529B3EB3A00FE8769 /* MainViewController.swift */; };
-		BCCC7C2629B3FE9F00FE8769 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCC7C2529B3FE9F00FE8769 /* MainView.swift */; };
-		BCCC7C2829B3FEA400FE8769 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCC7C2729B3FEA400FE8769 /* MainViewModel.swift */; };
+		BCCC7C1629B3EB3A00FE8769 /* UserPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCC7C1529B3EB3A00FE8769 /* UserPanelViewController.swift */; };
+		BCCC7C2629B3FE9F00FE8769 /* UserPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCC7C2529B3FE9F00FE8769 /* UserPanelView.swift */; };
+		BCCC7C2829B3FEA400FE8769 /* UserPanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCC7C2729B3FEA400FE8769 /* UserPanelViewModel.swift */; };
 		BCCC7C2E29B4571B00FE8769 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCCC7C2D29B4571B00FE8769 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -22,10 +22,10 @@
 		BCCC7C0E29B3EB3A00FE8769 /* EasyFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCCC7C1129B3EB3A00FE8769 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCCC7C1329B3EB3A00FE8769 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BCCC7C1529B3EB3A00FE8769 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BCCC7C1529B3EB3A00FE8769 /* UserPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPanelViewController.swift; sourceTree = "<group>"; };
 		BCCC7C1F29B3EB3C00FE8769 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BCCC7C2529B3FE9F00FE8769 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		BCCC7C2729B3FEA400FE8769 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		BCCC7C2529B3FE9F00FE8769 /* UserPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPanelView.swift; sourceTree = "<group>"; };
+		BCCC7C2729B3FEA400FE8769 /* UserPanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPanelViewModel.swift; sourceTree = "<group>"; };
 		BCCC7C2D29B4571B00FE8769 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C6B4EF48086ACEDFB2D861B7 /* Pods_EasyFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -72,15 +72,31 @@
 		BCCC7C1029B3EB3A00FE8769 /* EasyFinder */ = {
 			isa = PBXGroup;
 			children = (
-				BCCC7C1129B3EB3A00FE8769 /* AppDelegate.swift */,
-				BCCC7C1329B3EB3A00FE8769 /* SceneDelegate.swift */,
-				BCCC7C1529B3EB3A00FE8769 /* MainViewController.swift */,
-				BCCC7C2529B3FE9F00FE8769 /* MainView.swift */,
-				BCCC7C2729B3FEA400FE8769 /* MainViewModel.swift */,
+				BCCC7C2F29B46B9B00FE8769 /* Resources */,
+				BCCC7C3029B46BA800FE8769 /* UserPanel */,
 				BCCC7C1F29B3EB3C00FE8769 /* Info.plist */,
 				BCCC7C2D29B4571B00FE8769 /* GoogleService-Info.plist */,
 			);
 			path = EasyFinder;
+			sourceTree = "<group>";
+		};
+		BCCC7C2F29B46B9B00FE8769 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BCCC7C1129B3EB3A00FE8769 /* AppDelegate.swift */,
+				BCCC7C1329B3EB3A00FE8769 /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BCCC7C3029B46BA800FE8769 /* UserPanel */ = {
+			isa = PBXGroup;
+			children = (
+				BCCC7C1529B3EB3A00FE8769 /* UserPanelViewController.swift */,
+				BCCC7C2529B3FE9F00FE8769 /* UserPanelView.swift */,
+				BCCC7C2729B3FEA400FE8769 /* UserPanelViewModel.swift */,
+			);
+			path = UserPanel;
 			sourceTree = "<group>";
 		};
 		D262F2CECBD866EFBBC43EEF /* Frameworks */ = {
@@ -204,9 +220,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCCC7C2829B3FEA400FE8769 /* MainViewModel.swift in Sources */,
-				BCCC7C1629B3EB3A00FE8769 /* MainViewController.swift in Sources */,
-				BCCC7C2629B3FE9F00FE8769 /* MainView.swift in Sources */,
+				BCCC7C2829B3FEA400FE8769 /* UserPanelViewModel.swift in Sources */,
+				BCCC7C1629B3EB3A00FE8769 /* UserPanelViewController.swift in Sources */,
+				BCCC7C2629B3FE9F00FE8769 /* UserPanelView.swift in Sources */,
 				BCCC7C1229B3EB3A00FE8769 /* AppDelegate.swift in Sources */,
 				BCCC7C1429B3EB3A00FE8769 /* SceneDelegate.swift in Sources */,
 			);

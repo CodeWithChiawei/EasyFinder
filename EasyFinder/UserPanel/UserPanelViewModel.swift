@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseDatabase
 
-class MainViewModel {
+class UserPanelViewModel {
     
     private let dataBase = Database.database().reference()
     
@@ -18,6 +18,13 @@ class MainViewModel {
             "Last Name": lastName,
             "Hobby": hobby
         ]
-       dataBase.child("\(firstName) \(lastName)").setValue(object)
+        dataBase.child("\(firstName) \(lastName)").setValue(object)
+    }
+    
+    func searchUser(with fullName: String) {
+        dataBase.child(fullName).observeSingleEvent(of: .value) { dataSnapshot in
+            guard let value = dataSnapshot.value else { return }
+            print(value)
+        }
     }
 }

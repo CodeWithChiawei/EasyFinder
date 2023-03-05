@@ -7,10 +7,10 @@
 import UIKit
 import FirebaseDatabase
 
-class MainViewController: UIViewController {
+class UserPanelViewController: UIViewController {
     
-    private let contentView = MainView()
-    private let viewModel = MainViewModel()
+    private let contentView = UserPanelView()
+    private let viewModel = UserPanelViewModel()
     
     override func loadView() {
         view = contentView
@@ -19,13 +19,21 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         contentView.addButton.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
+        contentView.searchButton.addTarget(self, action: #selector(searchButtonTapped), for: .touchUpInside)
     }
     
     @objc
     private func addButtonTapped() {
-        
         contentView.creatingUser { [weak self] firstName, lastName, hobby in
             self?.viewModel.createUserToFirebase(with: firstName, lastName, and: hobby)
+        }
+        contentView.removeTextFieldsText()
+    }
+    
+    @objc
+    private func searchButtonTapped() {
+        contentView.searchUser { [weak self] searchedName in
+            self?.viewModel.searchUser(with: searchedName)
         }
     }
 }

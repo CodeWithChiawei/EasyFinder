@@ -9,12 +9,12 @@ import Foundation
 import UIKit
 import SnapKit
 
-class MainView: UIView {
+class UserPanelView: UIView {
     
     let searchTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .systemGray5
-        textField.placeholder = "Search Name Here"
+        textField.placeholder = "Search Full Name Here"
         textField.borderStyle = .line
         return textField
     }()
@@ -116,7 +116,7 @@ class MainView: UIView {
         }
     }
     
-    func creatingUser(completion: @escaping (String, String, String) -> Void ) {
+    func creatingUser(completion: @escaping (String, String, String) -> Void) {
         guard let firstName = firstNameTextField.text,
               let lastName = lastNameTextField.text,
               let hobby = hobbyNameTextField.text
@@ -124,7 +124,14 @@ class MainView: UIView {
         completion(firstName, lastName, hobby)
     }
     
-    func searchUser() {
-        
+    func searchUser(completion: @escaping (String) -> Void) {
+        guard let searchName = searchTextField.text else { return }
+        completion(searchName)
+    }
+    
+    func removeTextFieldsText() {
+        firstNameTextField.text?.removeAll()
+        lastNameTextField.text?.removeAll()
+        hobbyNameTextField.text?.removeAll()
     }
 }
