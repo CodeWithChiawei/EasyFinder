@@ -13,11 +13,13 @@ class UserPanelViewModel {
     private let dataBase = Database.database().reference()
     
     func createUserToFirebase(with firstName: String, _ lastName: String, and hobby: String) {
+        
         let object: [String: String] = [
             "First Name": firstName,
             "Last Name": lastName,
             "Hobby": hobby
         ]
+        
         if !firstName.isEmpty, !lastName.isEmpty, !hobby.isEmpty {
             dataBase.child("\(firstName) \(lastName)").setValue(object)
             print("\(firstName) \(lastName) created.")

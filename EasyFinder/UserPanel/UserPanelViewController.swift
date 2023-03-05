@@ -18,6 +18,7 @@ class UserPanelViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         contentView.addButton.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
         contentView.searchButton.addTarget(self, action: #selector(searchButtonTapped), for: .touchUpInside)
     }
