@@ -11,7 +11,7 @@ import SnapKit
 
 class UserPanelView: UIView {
     
-    let searchTextField: UITextField = {
+    private let searchTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .systemGray5
         textField.placeholder = "Search Full Name Here"
@@ -27,7 +27,7 @@ class UserPanelView: UIView {
         return button
     }()
     
-    let firstNameTextField: UITextField = {
+    private let firstNameTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .systemGray5
         textField.placeholder = "Enter First Name Here"
@@ -35,7 +35,7 @@ class UserPanelView: UIView {
         return textField
     }()
     
-    let lastNameTextField: UITextField = {
+    private let lastNameTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .systemGray5
         textField.placeholder = "Enter Last Name Here"
@@ -43,7 +43,7 @@ class UserPanelView: UIView {
         return textField
     }()
     
-    let hobbyNameTextField: UITextField = {
+    private let hobbyNameTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .systemGray5
         textField.placeholder = "Enter Hobby Here"
