@@ -115,4 +115,16 @@ class MainView: UIView {
             make.width.equalTo(150)
         }
     }
+    
+    func creatingUser(completion: @escaping (String, String, String) -> Void ) {
+        guard let firstName = firstNameTextField.text,
+              let lastName = lastNameTextField.text,
+              let hobby = hobbyNameTextField.text
+        else { return }
+        completion(firstName, lastName, hobby)
+    }
+    
+    func searchUser() {
+        
+    }
 }
